@@ -1,5 +1,11 @@
 Manifest-Version: 1.0
+Implementation-Title: service_suraksha
+Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: LIKHITH
+Implementation-Vendor-Id: com.sfsi
 Build-Jdk: 1.8.0_162
+Implementation-URL: http://projects.spring.io/spring-boot/service_sura
+ ksha/
 Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
 
