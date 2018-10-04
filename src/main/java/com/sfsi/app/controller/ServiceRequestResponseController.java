@@ -11,7 +11,6 @@ public class ServiceRequestResponseController {
 	@RequestMapping(method=RequestMethod.GET,value="/get_service")
 	public String getRequest(String request)
 	{
-		
 		return "Welcome To Suraksha Service";
 	}
 	
