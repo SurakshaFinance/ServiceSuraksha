@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sfsi.app.constants.ServiceErrorCode;
+import com.sfsi.app.constants.ServiceResult;
 import com.sfsi.app.exception.ServiceNonFatelException;
 import com.sfsi.app.request.Request;
 
@@ -16,7 +16,7 @@ public class ServiceHelper {
 		try {
 			return new ObjectMapper().readValue(jsonString, Request.class);
 		} catch (IOException e) {
-			throw new ServiceNonFatelException(ServiceErrorCode.INVALID_REQUEST);
+			throw new ServiceNonFatelException(ServiceResult.INVALID_REQUEST);
 		}
 	}
 
@@ -24,7 +24,7 @@ public class ServiceHelper {
 		try{
 			new ObjectMapper().readTree(request);
 		}catch (Exception e) {
-			throw new ServiceNonFatelException(ServiceErrorCode.BAD_REQUEST);
+			throw new ServiceNonFatelException(ServiceResult.BAD_REQUEST);
 		}
 	}
 }

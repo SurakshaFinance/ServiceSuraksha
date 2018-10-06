@@ -1,6 +1,6 @@
 package com.sfsi.app.constants;
 
-public enum ServiceErrorCode {
+public enum ServiceResult {
 	
 	INVALID_REQUEST("ER0091", "Invalid Request"),
 	BAD_REQUEST("ER0092", "Bad Request"),
@@ -12,7 +12,7 @@ public enum ServiceErrorCode {
 	private String code;
 	private String message;
 	
-	private ServiceErrorCode(String code, String message){
+	private ServiceResult(String code, String message){
 		this.code = code;
 		this.message = message;
 	}

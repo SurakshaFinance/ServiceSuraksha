@@ -1,9 +1,16 @@
 package com.sfsi.app.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class AgentDetails {
 	
+	@JsonProperty("agent_id_type")
 	private String agentIdType;
+	
+	@JsonProperty("agent_id_value")
 	private String agentIdValue;
+	
+	@JsonProperty("product_code")
 	private String productCode;
 	
 	public String getAgentIdType() {

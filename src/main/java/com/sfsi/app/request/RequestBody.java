@@ -1,13 +1,18 @@
 package com.sfsi.app.request;
 
-import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RequestBody {
 	
+	@JsonProperty("basic_details")
 	private BasicDetails basicDetails;
+	
+	@JsonProperty("customer_details")
 	private CustomerDetails customerDetails;
+	
+	@JsonProperty("agent_details")
 	private AgentDetails agentDetails;
-	private Map<String, String> requestSpecificDetails;
+
 	public BasicDetails getBasicDetails() {
 		return basicDetails;
 	}
@@ -25,12 +30,6 @@ public class RequestBody {
 	}
 	public void setAgentDetails(AgentDetails agentDetails) {
 		this.agentDetails = agentDetails;
-	}
-	public Map<String, String> getRequestSpecificDetails() {
-		return requestSpecificDetails;
-	}
-	public void setRequestSpecificDetails(Map<String, String> requestSpecificDetails) {
-		this.requestSpecificDetails = requestSpecificDetails;
 	}
 
 }

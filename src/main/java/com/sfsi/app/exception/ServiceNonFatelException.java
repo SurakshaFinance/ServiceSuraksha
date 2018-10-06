@@ -1,6 +1,6 @@
 package com.sfsi.app.exception;
 
-import com.sfsi.app.constants.ServiceErrorCode;
+import com.sfsi.app.constants.ServiceResult;
 
 public class ServiceNonFatelException extends RuntimeException {
 	
@@ -9,7 +9,7 @@ public class ServiceNonFatelException extends RuntimeException {
 	private String errorCode;
 	private String errorMessage;
 	
-	public ServiceNonFatelException(ServiceErrorCode errorCode){
+	public ServiceNonFatelException(ServiceResult errorCode){
 		this.errorCode = errorCode.getCode();
 		this.errorMessage = errorCode.getMessage();
 	}

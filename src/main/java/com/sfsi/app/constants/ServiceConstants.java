@@ -6,10 +6,10 @@ public enum ServiceConstants {
 	NON_FINANCIAL_CODE					("NFIN02"),
 	
 	CREATE_CUSTOMER						("TSC001"),
-	CREATE_AGENT						("TSC001"),
-	EDIT_CUSTOMER_POFILE				("TSC001"),
-	EDIT_AGENT_PROFILE					("TSC001"),
-	BALANCE_ENQUERY						("TSC002");
+	CREATE_AGENT						("TSC002"),
+	EDIT_CUSTOMER_POFILE				("TSC003"),
+	EDIT_AGENT_PROFILE					("TSC004"),
+	BALANCE_ENQUERY						("TSC005");
 	
 	private String code;
 	
