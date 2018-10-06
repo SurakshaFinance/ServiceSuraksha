@@ -1,10 +1,19 @@
 package com.sfsi.app.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class CustomerDetails {
 	
+	@JsonProperty("customer_id_type")
 	private String customerIdType;
+	
+	@JsonProperty("customer_id_value")
 	private String customerIdValue;
+	
+	@JsonProperty("product_code")
 	private String productCode;
+	
+	@JsonProperty("customer_check_code")
 	private String custometCheckCode;
 	
 	public String getCustomerIdType() {

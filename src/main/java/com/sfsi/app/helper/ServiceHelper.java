@@ -5,7 +5,8 @@ import java.io.IOException;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sfsi.app.controller.ExecutionContext;
+import com.sfsi.app.constants.ServiceResult;
+import com.sfsi.app.exception.ServiceNonFatelException;
 import com.sfsi.app.request.Request;
 
 @Component
@@ -15,13 +16,15 @@ public class ServiceHelper {
 		try {
 			return new ObjectMapper().readValue(jsonString, Request.class);
 		} catch (IOException e) {
-			e.printStackTrace();
-			return null;
+			throw new ServiceNonFatelException(ServiceResult.INVALID_REQUEST);
 		}
 	}
 
-	public void setCommonHedderData(ExecutionContext context) {
-		
+	public void validateRequest(String request) throws ServiceNonFatelException {
+		try{
+			new ObjectMapper().readTree(request);
+		}catch (Exception e) {
+			throw new ServiceNonFatelException(ServiceResult.BAD_REQUEST);
+		}
 	}
-	
 }

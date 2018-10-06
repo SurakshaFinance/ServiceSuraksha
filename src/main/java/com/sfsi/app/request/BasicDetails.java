@@ -1,10 +1,19 @@
 package com.sfsi.app.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class BasicDetails {
 	
+	@JsonProperty("amount")
 	private String amount;
+	
+	@JsonProperty("request_reference_number")
 	private String requestReferenceNumber;
+	
+	@JsonProperty("transaction_code")
 	private String transactionCode;
+	
+	@JsonProperty("transaction_sub_code")
 	private String transactionSubCode;
 	
 	public String getAmount() {

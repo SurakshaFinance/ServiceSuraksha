@@ -10,8 +10,8 @@ public class Response {
 	@JsonProperty("response_body")
 	private ResponseBody responseBody;
 	
-	@JsonProperty("error")
-	private Error error;
+	@JsonProperty("result")
+	private Result result;
 
 	public ResponseHeader getResponseHeader() {
 		return responseHeader;
@@ -29,12 +29,12 @@ public class Response {
 		this.responseBody = responseBody;
 	}
 
-	public Error getError() {
-		return error;
+	public Result getResult() {
+		return result;
 	}
 
-	public void setError(Error error) {
-		this.error = error;
+	public void setResult(Result result) {
+		this.result = result;
 	}
 	
 }
