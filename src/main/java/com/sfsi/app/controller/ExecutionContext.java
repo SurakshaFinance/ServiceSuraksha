@@ -11,7 +11,7 @@ import com.sfsi.app.response.Response;
 
 @Scope(value = "singleton")
 @Component("execution_context")
-public class EcecutionContext {
+public class ExecutionContext {
 	
 	private Request servceRequest;
 	private Response servceResponse;

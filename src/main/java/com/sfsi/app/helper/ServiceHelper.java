@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sfsi.app.controller.ExecutionContext;
 import com.sfsi.app.request.Request;
 
 @Component
@@ -18,4 +19,9 @@ public class ServiceHelper {
 			return null;
 		}
 	}
+
+	public void setCommonHedderData(ExecutionContext context) {
+		
+	}
+	
 }
