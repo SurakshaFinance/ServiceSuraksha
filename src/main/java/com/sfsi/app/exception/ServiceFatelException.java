@@ -2,6 +2,8 @@ package com.sfsi.app.exception;
 
 public class ServiceFatelException extends RuntimeException {
 
+	private static final long serialVersionUID = 1L;
+	
 	private String errorCode;
 	private String errorMessage;
 	
